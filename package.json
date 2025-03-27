@@ -12,7 +12,6 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://ParzY1.github.io/Portfoliov2",
 
   "scripts": {
     "start": "react-scripts start",
@@ -22,6 +21,7 @@
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
   },
+  "homepage": "https://ParzY1.github.io/Portfolio",
   "eslintConfig": {
     "extends": [
       "react-app",
