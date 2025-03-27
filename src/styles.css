@@ -81,14 +81,7 @@ ul {
     }
 }
 
-@keyframes rotate {
-    0% {
-        transform: rotate(0);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
+
 
 @keyframes pulse {
     0% {
@@ -134,22 +127,11 @@ header h1 {
     animation: float 4s infinite ease-in-out;
 }
 
-.hamburger {
-    display: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
 nav ul {
     display: flex;
     justify-content: center;
     gap: 30px;
     margin-top: 10px;
-    padding: 0 20px;
 }
 
 nav ul li {
@@ -176,8 +158,6 @@ nav ul li a:hover {
 section {
     padding: 100px 20px;
     animation: fadeIn 1s ease-out;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 h2 {
@@ -236,10 +216,8 @@ h2::after {
 
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 40px;
-    max-width: 1000px;
-    margin: 0 auto;
 }
 
 .skill-set {
@@ -260,13 +238,6 @@ h2::after {
     font-size: 1.8rem;
     color: #ff7e5f;
     margin-bottom: 20px;
-    text-align: center;
-}
-
-.skill-set ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .skill-set ul li {
@@ -295,10 +266,8 @@ h2::after {
 
 .projects-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
 }
 
 .project-card {
@@ -308,7 +277,6 @@ h2::after {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     animation: slideInRight 1s ease-out;
-    text-align: center;
 }
 
 .project-card:hover {
@@ -351,8 +319,6 @@ h2::after {
 .experience-container, .education-container, .certificates-container {
     display: grid;
     gap: 30px;
-    max-width: 800px;
-    margin: 0 auto;
 }
 
 .experience-item, .education-item, .certificate-item {
@@ -398,8 +364,6 @@ h2::after {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
 }
 
 .contact-details p {
@@ -429,7 +393,6 @@ h2::after {
     display: flex;
     gap: 15px;
     justify-content: center;
-    margin-top: 20px;
 }
 
 .social-links a {
@@ -448,25 +411,9 @@ h2::after {
 
 /* Responsywność */
 @media screen and (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-
     nav ul {
-        display: none;
         flex-direction: column;
         gap: 15px;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: linear-gradient(135deg, #ff7e5f, #feb47b);
-        padding: 20px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    nav ul.active {
-        display: flex;
     }
 
     section {
@@ -479,19 +426,5 @@ h2::after {
 
     .skills-container, .projects-list {
         grid-template-columns: 1fr;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    .about-content, .contact-details p {
-        font-size: 1rem;
-    }
-
-    .skill-set, .project-card {
-        padding: 15px;
     }
 }
